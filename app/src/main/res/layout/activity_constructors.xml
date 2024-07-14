@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    tools:context=".ConstructorActivity">
+
+        <Button
+            android:id="@+id/btnAppointment"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:background="@drawable/rounded_dialog"
+            android:text="Appointment"
+            android:textColor="@color/DarkGray"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnAvailbleworkers"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnAvailbleworkers"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:background="@drawable/rounded_dialog"
+            android:text="Available Workers"
+            android:textColor="@color/DarkGray"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/btnWantedworkers"
+            app:layout_constraintStart_toEndOf="@+id/btnAppointment"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnWantedworkers"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:background="@drawable/rounded_dialog"
+            android:text="Wanted workers"
+            android:textColor="@color/DarkGray"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnAvailbleworkers"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UnknownId" />
+
+        <ScrollView
+            android:id="@+id/detailsMasons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.gridlayout.widget.GridLayout
+                android:animateLayoutChanges="true"
+                android:id="@+id/gridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:columnCount="1"
+                app:rowCount="50">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="5dp"
+                    android:scaleType="centerCrop"
+                    android:text="Galle District"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="0dp"
+                    app:cardBackgroundColor="@color/Orange"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/rounded_outline"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="30dp">
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="Sumudu Udayanga"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="Galle Road, Hikkaduwa"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="077-3658965"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/constructorr" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="1dp"
+                            android:paddingRight="2dp"
+                            android:scaleType="centerCrop"
+                            android:text="Rs.2500/= per Day"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="0dp"
+                    app:cardBackgroundColor="@color/Orange"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/rounded_outline"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="30dp">
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="Kasun Kalhara"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="Baddegama Road,Hikkaduwa"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="0784518964"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/constructorr" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="1dp"
+                            android:paddingRight="2dp"
+                            android:scaleType="centerCrop"
+                            android:text="Rs.2300/= per Day"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="0dp"
+                    app:cardBackgroundColor="@color/Orange"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/rounded_outline"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="30dp">
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="Siripala De Silva"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="Thalangama North,Galle"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="0784518745"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/constructorr" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="1dp"
+                            android:paddingRight="2dp"
+                            android:scaleType="centerCrop"
+                            android:text="Rs.2300/= per Day"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="5dp"
+                    android:scaleType="centerCrop"
+                    android:text="Matara District"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_column="0"
+                    app:layout_row="4" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="0dp"
+                    app:cardBackgroundColor="@color/Red"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/rounded_outline"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="30dp">
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="Wasantha Perera"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="Beach Road, Matara"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="0761175845"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/constructorr" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="1dp"
+                            android:paddingRight="2dp"
+                            android:scaleType="centerCrop"
+                            android:text="Rs.2800/= per Day"
+                            android:textStyle="bold" />
+                    </LinearLayout>>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="0dp"
+                    app:cardBackgroundColor="@color/Red"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/rounded_outline"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="30dp">
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="Nimal Kariyawasam"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="Near Temple,Makumbura"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="0764525845"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/constructorr"/>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="1dp"
+                            android:paddingRight="2dp"
+                            android:scaleType="centerCrop"
+                            android:text="Rs.3700/= per Day"
+                            android:textStyle="bold" />
+                    </LinearLayout>>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="0dp"
+                    app:cardBackgroundColor="@color/Red"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="7">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/rounded_outline"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="30dp">
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="Sudath Ranasinghe"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="Nupe, Matara"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:scaleType="centerCrop"
+                                android:text="0777854121"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/constructorr" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="1dp"
+                            android:paddingRight="2dp"
+                            android:scaleType="centerCrop"
+                            android:text="Rs.2800/= per Day"
+                            android:textStyle="bold" />
+                    </LinearLayout>>
+                </androidx.cardview.widget.CardView>
+            </androidx.gridlayout.widget.GridLayout>
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
